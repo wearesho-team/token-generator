@@ -3,7 +3,7 @@
 namespace Wearesho\TokenGenerator\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Wearesho\TokenGenerator\StringTokenGenerator;
+use Wearesho\TokenGenerator\StringToken;
 
 /**
  * Class StringTokenGenerator
@@ -13,7 +13,7 @@ class StringTokenGeneratorTest extends TestCase
 {
     public function testGenerate(): void
     {
-        $generator = new StringTokenGenerator(5, ['a']);
+        $generator = new StringToken(5, ['a']);
 
         $this->assertEquals('aaaaa', $generator->generate());
     }

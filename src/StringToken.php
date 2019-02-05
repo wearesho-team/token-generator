@@ -6,7 +6,7 @@ namespace Wearesho\TokenGenerator;
  * Class StringTokenGenerator
  * @package Wearesho\TokenGenerator
  */
-class StringTokenGenerator implements TokenGeneratorInterface
+class StringToken implements TokenGeneratorInterface
 {
     /** @var int */
     protected $length;

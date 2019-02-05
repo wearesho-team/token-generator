@@ -6,7 +6,7 @@ namespace Wearesho\TokenGenerator;
  * Class NumericTokenGenerator
  * @package Wearesho\TokenGenerator
  */
-class NumericTokenGenerator extends StringTokenGenerator
+class NumericToken extends StringToken
 {
     public function __construct(int $length)
     {
