@@ -24,10 +24,10 @@ class Char implements Generator
 
     public function generate(): string
     {
-        $chars = array_flip($this->chars);
+        $length = count($this->chars);
 
-        return implode('', array_map(function () use ($chars) {
-            return array_rand($chars);
+        return implode('', array_map(function () use ($length) {
+            return $this->chars[random_int(0, $length - 1)];
         }, range(1, $this->length)));
     }
 }
