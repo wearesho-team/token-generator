@@ -1,19 +1,19 @@
 <?php
 
-namespace Wearesho\Token\Tests;
+namespace Wearesho\Token\Tests\Generator;
 
 use PHPUnit\Framework\TestCase;
-use Wearesho\Token\Generator\Number;
+use Wearesho\Token\Generator\Numeric;
 
 /**
- * Class NumberTokenGenerator
- * @package Wearesho\TokenGenerator\Tests
+ * Class NumericTest
+ * @package Wearesho\TokenGenerator\Tests\Generator
  */
-class NumberTokenGeneratorTest extends TestCase
+class NumericTest extends TestCase
 {
     public function testGenerate(): void
     {
-        $generator = new Number(6);
+        $generator = new Numeric(6);
         $value = $generator->generate();
         $this->assertEquals(6, strlen($value));
         $this->assertIsNumeric($value);

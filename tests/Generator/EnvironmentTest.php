@@ -1,15 +1,15 @@
 <?php
 
-namespace Wearesho\Token\Tests;
+namespace Wearesho\Token\Tests\Generator;
 
 use PHPUnit\Framework\TestCase;
 use Wearesho\Token\Generator\Environment;
 
 /**
- * Class EnvironmentGeneratorTest
- * @package Wearesho\Token\Tests
+ * Class EnvironmentTest
+ * @package Wearesho\Token\Tests\Generator
  */
-class EnvironmentGeneratorTest extends TestCase
+class EnvironmentTest extends TestCase
 {
     public function testGenerate(): void
     {

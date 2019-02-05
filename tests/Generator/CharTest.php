@@ -1,15 +1,15 @@
 <?php
 
-namespace Wearesho\Token\Tests;
+namespace Wearesho\Token\Tests\Generator;
 
 use PHPUnit\Framework\TestCase;
 use Wearesho\Token\Generator\Char;
 
 /**
- * Class StringTokenGenerator
- * @package Wearesho\TokenGenerator\Tests
+ * Class CharTest
+ * @package Wearesho\TokenGenerator\Tests\Generator
  */
-class StringTokenGeneratorTest extends TestCase
+class CharTest extends TestCase
 {
     public function testGenerate(): void
     {
