@@ -26,7 +26,7 @@ class Char implements Generator
     {
         $length = count($this->chars);
 
-        return implode('', array_map(function () use ($length) {
+        return implode(array_map(function () use ($length) {
             return $this->chars[random_int(0, $length - 1)];
         }, range(1, $this->length)));
     }
