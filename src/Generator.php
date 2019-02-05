@@ -1,12 +1,12 @@
 <?php
 
-namespace Wearesho\TokenGenerator;
+namespace Wearesho\Token;
 
 /**
  * Interface TokenGeneratorInterface
  * @package Wearesho\TokenGenerator
  */
-interface TokenGeneratorInterface
+interface Generator
 {
     public function generate(): string;
 }
