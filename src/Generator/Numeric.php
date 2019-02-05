@@ -1,12 +1,12 @@
 <?php
 
-namespace Wearesho\TokenGenerator;
+namespace Wearesho\Token\Generator;
 
 /**
  * Class NumericTokenGenerator
- * @package Wearesho\TokenGenerator
+ * @package Wearesho\Token\Generator
  */
-class NumericToken extends StringToken
+class Numeric extends Char
 {
     public function __construct(int $length)
     {

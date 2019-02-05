@@ -1,12 +1,14 @@
 <?php
 
-namespace Wearesho\TokenGenerator;
+namespace Wearesho\Token\Generator;
+
+use Wearesho\Token\Generator;
 
 /**
  * Class NumberTokenGenerator
- * @package Wearesho\TokenGenerator
+ * @package Wearesho\Token\Generator
  */
-class NumberToken implements TokenGeneratorInterface
+class Number implements Generator
 {
     /** @var int */
     protected $length;

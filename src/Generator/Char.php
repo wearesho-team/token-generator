@@ -1,12 +1,14 @@
 <?php
 
-namespace Wearesho\TokenGenerator;
+namespace Wearesho\Token\Generator;
+
+use Wearesho\Token\Generator;
 
 /**
  * Class StringTokenGenerator
- * @package Wearesho\TokenGenerator
+ * @package Wearesho\Token\Generator
  */
-class StringToken implements TokenGeneratorInterface
+class Char implements Generator
 {
     /** @var int */
     protected $length;
@@ -22,10 +24,10 @@ class StringToken implements TokenGeneratorInterface
 
     public function generate(): string
     {
-        $chars = array_flip($this->chars);
+        $length = count($this->chars);
 
-        return implode('', array_map(function () use ($chars) {
-            return array_rand($chars);
+        return implode(array_map(function () use ($length) {
+            return $this->chars[random_int(0, $length - 1)];
         }, range(1, $this->length)));
     }
 }
