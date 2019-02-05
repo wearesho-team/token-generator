@@ -10,44 +10,59 @@ composer require wearesho-team/token-generator
 
 ## Usage
 
-### NumberToken
+### Number
 ```php
 <?php
 
-use Wearesho\TokenGenerator;
+use Wearesho\Token;
 
-$generator = new TokenGenerator\NumberToken($length = 5);
+$generator = new Token\Generator\Number($length = 5);
 $value = $generator->generate();
 
 // value will contain number with 5 digits that can be converted to int 
 
 ```
 
-### StringToken
+### Char
 
 ```php
 <?php
 
-use Wearesho\TokenGenerator;
+use Wearesho\Token;
 
-$generator = new TokenGenerator\StringToken($length = 5, $range = ['a', 'b', 'c']);
+$generator = new Token\Generator\Char($length = 5, $range = ['a', 'b', 'c']);
 $value = $generator->generate();
 
 // value will contain 5 characters from passed range in random sequence. 
 
 ```
 
-### NumericToken
+### Numeric
 
 ```php
 <?php
 
-use Wearesho\TokenGenerator;
+use Wearesho\Token;
 
-$generator = new TokenGenerator\NumericToken($length = 5);
+$generator = new Token\Generator\Numeric($length = 5);
 $value = $generator->generate();
 
-// value will contain string that contains 5 digits and can start with `0` 
+// value will contain string from 5 digits and can start with `0` 
 
 ```
 
+### Environment
+
+
+```php
+<?php
+
+use Wearesho\Token;
+
+$generator = new Token\Generator\Environment($length = 5);
+putenv('TOKEN_GENERATOR_VALUE=z');
+$value = $generator->generate();
+
+// value will contain 5 characters `z` that will be taken from environment.
+
+```
