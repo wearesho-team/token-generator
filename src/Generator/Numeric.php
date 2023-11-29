@@ -1,11 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Wearesho\Token\Generator;
 
-/**
- * Class NumericTokenGenerator
- * @package Wearesho\Token\Generator
- */
 class Numeric extends Char
 {
     public function __construct(int $length)
