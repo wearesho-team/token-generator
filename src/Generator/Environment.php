@@ -1,21 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Wearesho\Token\Generator;
 
 use Horat1us\Environment\Config;
 use Wearesho\Token\Generator;
 
-/**
- * Class Environment
- * @package Wearesho\Token\Generator
- */
 class Environment extends Config implements Generator
 {
-    /** @var int */
-    protected $length;
+    protected int $length;
 
-    /** @var Generator */
-    protected $default;
+    protected ?Generator $default = null;
 
     public function __construct(int $length, string $keyPrefix = 'TOKEN_GENERATOR_', ?Generator $default = null)
     {
