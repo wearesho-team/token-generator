@@ -1,11 +1,13 @@
 # Token Generator
+[![Test & Lint](https://github.com/wearesho-team/token-generator/actions/workflows/php.yml/badge.svg)](https://github.com/wearesho-team/token-generator/actions/workflows/php.yml)
+[![codecov](https://codecov.io/gh/wearesho-team/token-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/wearesho-team/token-generator)
 
 This package should be used for generating different kinds of random token values.
 
 ## Installation
 
 ```bash
-composer require wearesho-team/token-generator
+composer require wearesho-team/token-generator:^1.2
 ```
 
 ## Usage
