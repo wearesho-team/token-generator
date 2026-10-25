@@ -4,10 +4,12 @@
 
 This package should be used for generating different kinds of random token values.
 
+Compatibility: tested on PHP 8.4, PHP 8.5
+
 ## Installation
 
 ```bash
-composer require wearesho-team/token-generator:^1.2
+composer require wearesho-team/token-generator:^1.3
 ```
 
 ## Usage
@@ -76,7 +78,7 @@ You can also pass default generator for environment generator that will be used 
 
 use Wearesho\Token;
 
-$generator = new Token\Generator\Environment($length = 5, 'ENV_PREFIX_', $default = new Token\Generator\Char(5, 'a'));
+$generator = new Token\Generator\Environment($length = 5, 'ENV_PREFIX_', $default = new Token\Generator\Char(5, ['a']));
 
 // In case your environment has not key ENV_PREFIX_VALUE, default generator will be used
 // It will be also used in case of any exception in Environment generator
